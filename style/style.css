@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+:root {
+    --whitecolor: #F5F5F1;
+    --blackcolor: #221F1F;
+    --red1: #B81D24;
+    --red2: #E50914;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Bebas Neue', cursive;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    background-image: url('../img/background.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+
+.black {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(to right, black, transparent, black);
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    z-index: -1;
+}
+
+.search,
+.noti,
+.log {
+    width: 100%;
+    min-height: 100vh;
+    background: rgb(0, 0, 0, 0.5);
+    color: var(--whitecolor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    animation: drop 1s;
+    display: none;
+    z-index: 2;
+}
+
+.noti {
+    animation: drop2 1s;
+}
+
+.log {
+    animation: drop3 1s;
+}
+
+.search h1,
+.form h1 {
+    font-size: 50px;
+    letter-spacing: 2px;
+}
+
+.box {
+    margin-top: 50px;
+    width: 350px;
+    height: 50px;
+    position: relative;
+    border-radius: 100px;
+    overflow: hidden;
+}
+
+.search input,
+.form input,.two {
+    width: 350px;
+    height: 50px;
+    border-radius: 100px;
+    border: solid var(--red2) 3px;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    font-weight: 700;
+    align-items: center;
+    text-align: center;
+    font-size: 25px;
+    font-family: roboto;
+    filter: drop-shadow(0px 0px 5px black);
+}
+
+.close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    transform: rotate(45deg);
+    cursor: pointer;
+}
+
+.close::after {
+    content: '+';
+    font-size: 80px;
+}
+
+.notibox {
+    width: 50%;
+    height: 400px;
+    background-color: var(--blackcolor);
+    color: var(--red1);
+    text-align: center;
+    border-radius: 30px;
+    filter: drop-shadow(0px 0px 5px black);
+}
+
+.notibox h2 {
+    margin: 30px;
+    letter-spacing: 3px;
+    font-size: 25px;
+    border-bottom: solid var(--red2) 2px;
+}
+
+.notibox h3 {
+    color: var(--whitecolor);
+    font-size: 22px;
+    padding-bottom: 8px;
+    letter-spacing: 3px;
+    margin: 15px 0px;
+    border-bottom: solid var(--red2) 2px;
+}
+
+.num {
+    color: var(--red2)
+}
+
+.log h1 {
+    letter-spacing: 3px;
+}
+
+.form {
+    width: 50%;
+    height: 300px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+.main {
+    min-height: 100vh;
+    width: 100%;
+}
+
+.nav {
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    position: relative;
+}
+
+.logo {
+    flex: 0.8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 15px;
+}
+
+.logo img {
+    width: 200px;
+    cursor: pointer;
+}
+
+.menu {
+    flex: 2;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.menu ul {
+    font-size: 18px;
+    font-family: roboto;
+    display: inline-block;
+    color: var(--whitecolor);
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.menuLine {
+    display: block;
+    width: 0px;
+    height: 5px;
+    background: linear-gradient(to right, var(--red1), var(--red2));
+    margin-top: 5px;
+    border-radius: 100px;
+    transition: 0.5s;
+}
+
+.home {
+    width: 100%;
+}
+
+.menu ul:hover .menuLine {
+    width: 100%;
+}
+
+.icons {
+    flex: 2.5;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.icon {
+    margin-right: 30px;
+    flex: 0.2;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.fas {
+    color: var(--whitecolor);
+    font-size: 22px;
+    cursor: pointer;
+    margin-left: 15px;
+    transition: 0.5s;
+}
+
+.fas:hover {
+    transform: scale(1.2)
+}
+
+.login {
+    padding: 7px 25px;
+    font-size: 20px;
+    background-color: var(--red2);
+    border: none;
+    color: var(--whitecolor);
+    border-radius: 100px;
+    cursor: pointer;
+    margin-left: 15px;
+    letter-spacing: 1px;
+    transition: 0.5s;
+}
+
+.login:hover {
+    transform: scale(1.15);
+}
+
+.searchico {
+    position: absolute;
+    color: var(--whitecolor);
+    right: 0px;
+    top: 0;
+    z-index: 5;
+    background-color: var(--red2);
+    height: 100%;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.searchico i {
+    font-size: 25px;
+    margin-right: 20px;
+
+}
+

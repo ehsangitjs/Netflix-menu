@@ -1,0 +1,31 @@
+@media screen and (max-width:1200px) {
+    .nav{
+        height: 200px;
+    }
+    .icons {
+        flex: 0.8;
+    }
+
+    .min {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:720px) {
+
+    .menu {
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translate(-50%,-100%);
+        width: 100%;
+    }
+
+    .menu ul {
+        margin: 15px;
+    }
+
+    .notibox {
+        width: 80%;
+    }
+}
